@@ -7,7 +7,7 @@ import path from "path";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-const siteUrl = import.meta.env.PUBLIC_SITE_URL || 'https://your-domain.com';
+const siteUrl = import.meta.env.PUBLIC_SITE_URL || 'https://porfolio-alex.vercel.app';
 
 // https://astro.build/config
 export default defineConfig({
