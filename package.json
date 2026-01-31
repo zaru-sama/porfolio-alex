@@ -15,18 +15,18 @@
     "responsive"
   ],
   "author": {
-    "name": "Your Name",
-    "email": "you@example.com",
-    "url": "https://your-domain.com"
+    "name": "Alexander BUsch",
+    "email": "alex_busch_cv@proton.me",
+    "url": "https://porfolio-alex.vercel.app"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/your-repo.git"
+    "url": "https://github.com/zaru-sama/porfolio-alex.git"
   },
   "bugs": {
-    "url": "https://github.com/your-username/your-repo/issues"
+    "url": "https://github.com/zaru-sama/porfolio-alex/issues"
   },
-  "homepage": "https://github.com/your-username/your-repo#readme",
+  "homepage": "https://porfolio-alex.vercel.app",
   "license": "MIT",
   "scripts": {
     "dev": "astro dev",

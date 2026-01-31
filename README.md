@@ -44,9 +44,7 @@ cp .env.example .env
 Then set `PUBLIC_SITE_URL` when you know your final domain:
 
 ```env
-PUBLIC_SITE_URL=https://your-domain.com
-PUBLIC_GA4_ID=
-PUBLIC_UMAMI_ID=
+PUBLIC_SITE_URL=https://porfolio-alex.vercel.app
 ```
 
 ### Why `PUBLIC_SITE_URL` matters
