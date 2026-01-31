@@ -3,6 +3,9 @@ dist/
 # generated types
 .astro/
 
+# marerials folder
+materials/
+
 # dependencies
 node_modules/
 
