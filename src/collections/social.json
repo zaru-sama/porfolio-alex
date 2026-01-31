@@ -1,0 +1,36 @@
+[
+	{
+        "id": 1,
+		"name": "Github",
+        "username": "zaru-sama",
+		"image": "/assets/social/social-github.png",
+		"url": "https://github.com/zaru-sama"
+	},
+
+    {
+        "id": 2,
+		"name": "LinkedIn",
+        "username": "alexander.busch",
+		"image": "/assets/social/social-linkedin.png",
+		"url": "https://www.linkedin.com/in/alexander-busch-53012a111/"
+	},
+
+    {
+        "id": 3,
+		"name": "figma",
+        "username": "alex.busch",
+		"image": "/assets/social/social-figma.png",
+		"url": "https://www.figma.com/@31aab684_6d0a_4",
+        "isShow": true
+	},
+
+    {
+        "id": 4,
+		"name": "Email",
+        "username": "alex_busch_cv",
+		"image": "/assets/social/social-proton.png",
+		"url": "mailto:alex_busch_cv@proton.me"
+	}
+
+
+]

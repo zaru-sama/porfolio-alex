@@ -1,0 +1,198 @@
+---
+import ThemeImage from "@/components/ui/ThemeImage.astro";
+---
+
+<div
+  class="z-1 absolute justify-center w-full mt-16 md:flex md:pl-10 md:w-1/2 md:mt-0"
+  data-parallax-root
+>
+  <!-- Rocket -->
+  <div
+    class="absolute max-w-32 h-auto sm:max-w-48 3xl:max-w-50 translate-x-0 -translate-y-90 sm:-translate-x-50 sm:-translate-y-110 lg:-translate-x-110 lg:-translate-y-85 3xl:-translate-x-160 3xl:-translate-y-90 rotate-45"
+    data-aos="fade-up-lg"
+    data-aos-delay="600"
+    data-aos-duration="1000"
+    data-aos-once="true"
+  >
+    <div class="parallax-item" data-strength="16">
+      <ThemeImage
+        light="/assets/icons/rocket.png"
+        dark="/assets/icons/rocket-dark.png"
+        alt="rocket icon"
+      />
+    </div>
+  </div>
+
+  <!-- Palette -->
+  <div
+    class="absolute max-w-24 h-auto sm:max-w-36 3xl:max-w-40 translate-x-0 translate-y-42 sm:-translate-x-65 sm:translate-y-44 lg:-translate-x-105 lg:translate-y-24 3xl:-translate-x-180 3xl:translate-y-30 rotate-30 sm:-rotate-10"
+    data-aos="fade-up-lg"
+    data-aos-delay="900"
+    data-aos-duration="1000"
+    data-aos-once="true"
+  >
+    <div class="parallax-item" data-strength="22">
+      <ThemeImage
+        light="/assets/icons/palette.png"
+        dark="/assets/icons/palette-dark.png"
+        alt="palette icon"
+      />
+    </div>
+  </div>
+
+  <!-- Color dropper -->
+  <div
+    class="absolute max-w-16 h-auto sm:max-w-24 3xl:max-w-28 sm:-scale-x-100 translate-x-7 -rotate-10 sm:rotate-0 translate-y-35 sm:-translate-x-70 sm:translate-y-34 lg:-translate-x-120 lg:translate-y-14 3xl:-translate-x-185 3xl:translate-y-20"
+    data-aos="fade-up-lg"
+    data-aos-delay="800"
+    data-aos-duration="1000"
+    data-aos-once="true"
+  >
+    <div class="parallax-item" data-strength="26">
+      <ThemeImage
+        light="/assets/icons/color_dropper.png"
+        dark="/assets/icons/color_dropper-dark.png"
+        alt="color dropper icon"
+      />
+    </div>
+  </div>
+
+  <!-- Paperclip -->
+  <div
+    class="absolute max-w-20 3xl:max-w-24 h-auto -translate-x-10 translate-y-15 sm:-translate-x-80 sm:-translate-y-75 lg:-translate-x-135 lg:-translate-y-25 3xl:-translate-x-140 3xl:-translate-y-20"
+    data-aos="fade-up-lg"
+    data-aos-delay="700"
+    data-aos-duration="1000"
+    data-aos-once="true"
+  >
+    <div class="parallax-item" data-strength="18">
+      <ThemeImage
+        light="/assets/icons/paperclip.png"
+        dark="/assets/icons/paperclip-dark.png"
+        alt="paperclip icon"
+      />
+    </div>
+  </div>
+
+  <!-- Smile -->
+  <div
+    class="absolute max-w-32 sm:max-w-36 3xl:max-w-44 h-auto translate-x-80 -translate-y-75 sm:translate-x-90 sm:-translate-y-70 3xl:translate-x-140 3xl:-translate-y-90"
+    data-aos="fade-up-lg"
+    data-aos-delay="700"
+    data-aos-duration="1000"
+    data-aos-once="true"
+  >
+    <div class="parallax-item" data-strength="-10">
+      <ThemeImage
+        light="/assets/icons/smile.png"
+        dark="/assets/icons/smile-dark.png"
+        alt="smile icon"
+      />
+    </div>
+  </div>
+
+  <!-- Pin -->
+  <div
+    class="absolute max-w-12 sm:max-w-20 3xl:max-w-24 h-auto translate-x-65 -translate-y-80 sm:translate-x-50 sm:-translate-y-90 lg:translate-x-130 lg:-translate-y-50 3xl:translate-x-160 3xl:-translate-y-50 rotate-30"
+    data-aos="fade-up-lg"
+    data-aos-delay="800"
+    data-aos-duration="1200"
+    data-aos-once="true"
+  >
+    <div class="parallax-item" data-strength="30">
+      <ThemeImage
+        light="/assets/icons/pin.png"
+        dark="/assets/icons/pin-dark.png"
+        alt="pin icon"
+      />
+    </div>
+  </div>
+
+  <!-- Code screen -->
+  <div
+    class="absolute max-w-40 sm:max-w-60 3xl:max-w-64 translate-x-70 translate-y-25 lg:translate-x-100 lg:translate-y-10 3xl:translate-x-160 3xl:translate-y-15 rotate-40"
+    data-aos="fade-up-lg"
+    data-aos-delay="1000"
+    data-aos-duration="1100"
+    data-aos-once="true"
+  >
+    <div class="parallax-item" data-strength="10">
+      <ThemeImage
+        light="/assets/icons/code_screen.png"
+        dark="/assets/icons/code_screen-dark.png"
+        alt="code screen icon"
+      />
+    </div>
+  </div>
+
+  <!-- Keyboard -->
+  <div
+    class="absolute max-w-32 sm:max-w-40 lg:max-w-48 3xl:max-w-56 translate-x-60 translate-y-35 sm:translate-x-50 sm:translate-y-40 lg:translate-x-110 lg:-translate-y-10 3xl:translate-x-140 3xl:-translate-y-5 rotate-20"
+    data-aos="fade-up-lg"
+    data-aos-delay="900"
+    data-aos-duration="1000"
+    data-aos-once="true"
+  >
+    <div class="parallax-item" data-strength="-28">
+      <ThemeImage
+        light="/assets/icons/keyboard.png"
+        dark="/assets/icons/keyboard-dark.png"
+        alt="keyboard icon"
+      />
+    </div>
+  </div>
+</div>
+
+<script>
+  function initIconParallax() {
+    const root = document.querySelector("[data-parallax-root]");
+    if (!root) return;
+
+    // prevent double init
+    if (root.getAttribute("data-init") === "true") return;
+    root.setAttribute("data-init", "true");
+
+    const isMobile = window.innerWidth < 768;
+    if (isMobile) return;
+
+    const items = root.querySelectorAll<HTMLElement>(".parallax-item");
+    if (!items.length) return;
+
+    let mouseX = 0;
+    let mouseY = 0;
+
+    document.addEventListener("mousemove", (e) => {
+      mouseX = e.clientX / window.innerWidth - 0.5;
+      mouseY = e.clientY / window.innerHeight - 0.5;
+    });
+
+    const parallaxEasing = 0.08;
+
+    // store current positions
+    const state = new Map();
+    items.forEach((el) => state.set(el, { x: 0, y: 0 }));
+
+    function updateParallax() {
+      items.forEach((el) => {
+        const strength = Number(el.getAttribute("data-strength") || 20);
+
+        const targetX = mouseX * strength;
+        const targetY = mouseY * strength;
+
+        const s = state.get(el);
+        s.x += (targetX - s.x) * parallaxEasing;
+        s.y += (targetY - s.y) * parallaxEasing;
+
+        el.style.transform = `translate3d(${s.x}px, ${s.y}px, 0)`;
+        el.style.willChange = "transform";
+      });
+
+      requestAnimationFrame(updateParallax);
+    }
+
+    updateParallax();
+  }
+
+  document.addEventListener("DOMContentLoaded", initIconParallax);
+  document.addEventListener("astro:page-load", initIconParallax);
+</script>

@@ -1,0 +1,98 @@
+<!-- Back to top button -->
+<button
+  id="back-to-top"
+  aria-label="Back to top"
+  class="back-to-top fixed z-[1000]
+         bottom-6 right-6 md:bottom-8 md:right-8 md:w-12 md:h-12
+         rounded-full flex items-center justify-center
+         bg-[var(--color-primary,#2d6dc3)] text-white border-0 cursor-pointer
+         opacity-0 invisible translate-y-4
+         transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)]
+         shadow-[0_4px_12px_rgba(91,84,211,0.3)]
+         hover:bg-[var(--color-primary-light,#0066ff)]
+         hover:translate-y-0 hover:shadow-[0_8px_20px_rgba(91,84,211,0.4)]
+         active:scale-95
+         dark:bg-[var(--color-primary,#c2bdff)]
+         dark:text-[#1a1a1a]
+         dark:shadow-[0_4px_12px_rgba(194,189,255,0.3)]
+         dark:hover:bg-[var(--color-primary-light,#c2bdff)]
+         dark:hover:shadow-[0_8px_20px_rgba(194,189,255,0.4)]"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="1.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    class="w-6 h-6 block"
+  >
+    <path d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18"></path>
+  </svg>
+</button>
+
+<script>
+  // Back to top button functionality
+  function initBackToTop() {
+    const backToTopButton = document.getElementById("back-to-top");
+    if (!backToTopButton) return;
+
+    // Update button visibility state
+    function updateBackToTopButton() {
+      if (!backToTopButton) return;
+      if (window.scrollY > 300) {
+        backToTopButton.classList.remove(
+          "opacity-0",
+          "invisible",
+          "translate-y-4",
+        );
+        backToTopButton.classList.add(
+          "opacity-100",
+          "visible",
+          "translate-y-0",
+        );
+      } else {
+        backToTopButton.classList.add(
+          "opacity-0",
+          "invisible",
+          "translate-y-4",
+        );
+        backToTopButton.classList.remove(
+          "opacity-100",
+          "visible",
+          "translate-y-0",
+        );
+      }
+    }
+
+    // Smooth scroll to top
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+
+    // Scroll event listener
+    window.addEventListener("scroll", updateBackToTopButton, { passive: true });
+
+    // Click event listener
+    if (backToTopButton) {
+      backToTopButton.addEventListener("click", scrollToTop);
+    }
+
+    // Initialize
+    updateBackToTopButton();
+  }
+
+  // Initialize on page load
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initBackToTop);
+  } else {
+    initBackToTop();
+  }
+
+  // Support View Transitions
+  document.addEventListener("astro:page-load", initBackToTop);
+</script>

@@ -1,0 +1,95 @@
+---
+import { Image } from "astro:assets";
+import PostLayout from "@/layouts/PostLayout.astro";
+import PageHeader from "@/components/elements/PageHeader.astro";
+import SeparatorLine from "@/components/elements/SeparatorLine.astro";
+import Button from "../../components/ui/Button.astro";
+
+const workTitle = "Lab321 website";
+const workTags = ["IT", "Software", "Webdesign", "CRM", "ERP", "Consulting"];
+
+import Img01 from "../../assets/work/lab321/lab-01.webp";
+import Img02 from "../../assets/work/lab321/lab-02.webp";
+import Img03 from "../../assets/work/lab321/lab-03.webp";
+import Img04 from "../../assets/work/lab321/lab-04.webp";
+const images = [Img01, Img02, Img03, Img04];
+
+const websiteUrl = "https://lab321.de";
+---
+
+<PostLayout
+  title={workTitle}
+  description="Corporate website"
+  keywords="IT, Software, Webdesign, Sobware integration, Lab321"
+>
+  <div class="work article">
+    <main class="work-wrapper">
+      <PageHeader title={workTitle} tags={workTags} className="mb-6 md:mb-8" />
+    </main>
+    <div class="site-container m-auto">
+      <SeparatorLine />
+    </div>
+    <section class="article-content">
+      <div class="site-container mx-auto my-8 md:my-16">
+        <div class="text-neutral-600 dark:text-neutral-400">
+          <p>
+            Lab321 is an IT services brand focused on pragmatic business
+            solutions — spanning infrastructure and enterprise hardware, CRM/ERP
+            implementations, and custom software extensions.
+          </p>
+          <p>
+            For this project, I delivered the website end-to-end: brand concept
+            through launch. I designed the Lab321 logo and visual identity, set
+            the UI/UX direction, and created interactive layouts before building
+            the production site. The final implementation is a fast, responsive
+            single-page experience built with Vue.js (Vue Router + i18n for
+            multilingual content) and Bootstrap, including custom components,
+            tailored graphics, and polished, mobile-first styling.
+          </p>
+        </div>
+        <!-- Button - AOS animation -->
+        <div
+          class="flex flex-col items-center justify-center relative z-10"
+          data-aos="fade-up-sm"
+          data-aos-once="true"
+        >
+          <Button
+            url={websiteUrl}
+            target="_blank"
+            type="fill"
+            className="m-auto mt-4 text-center sm:text-left sm:m-0 sm:mt-6 max-w-[200px] group"
+          >
+            To the website<svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              class="size-4 transition-transform group-hover:translate-x-1"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+            </svg>
+          </Button>
+        </div>
+
+        {
+          images.map((img, index) => (
+            <picture class="picture mt-8 md:mt-12 mb-8 md:mb-12 rounded-2xl overflow-hidden">
+              <Image
+                src={img}
+                alt={`Lab321 asset ${index + 1}`}
+                class="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
+                quality={100}
+              />
+            </picture>
+          ))
+        }
+      </div>
+    </section>
+  </div>
+</PostLayout>

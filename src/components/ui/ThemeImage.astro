@@ -1,0 +1,36 @@
+---
+interface Props {
+  light: string;
+  dark: string;
+  alt: string;
+  class?: string;
+  loading?: "lazy" | "eager";
+  decoding?: "async" | "auto" | "sync";
+}
+const {
+  light,
+  dark,
+  alt,
+  class: className = "",
+  loading = "lazy",
+  decoding = "async",
+} = Astro.props;
+---
+
+<!-- Light -->
+<img
+  src={light}
+  alt={alt}
+  class={`${className} dark:hidden`}
+  loading={loading}
+  decoding={decoding}
+/>
+
+<!-- Dark -->
+<img
+  src={dark}
+  alt={alt}
+  class={`${className} hidden dark:block`}
+  loading={loading}
+  decoding={decoding}
+/>

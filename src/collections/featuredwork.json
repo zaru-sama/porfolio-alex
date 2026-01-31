@@ -1,0 +1,45 @@
+[
+	{
+		"name": "Lab321",
+		"description": "Software Laboratory",
+		"tags": ["Software", "Webdesign", "CRM/ERP", "Consulting"],
+		"image": "/assets/works/lab321.webp",
+		"url": "/work/lab321",
+		"website": "https://www.lab321.de",
+		"isShow": true
+	},
+	{
+		"name": "Budget-Efficace",
+		"description": "Marketing website",
+		"tags": ["Marketing", "3D", "Motion One"],
+		"image": "/assets/works/budget-efficace.webp",
+		"url": "https://budget-efficace.com/",
+		"isShow": true
+	},
+	{
+		"name": "Checkido",
+		"description": "Marketing website",
+		"tags": ["Marketing", "AOS", "Taiwind"],
+		"image": "/assets/works/checkido.webp",
+		"url": "https://checkido.com/",
+		"isShow": true
+	},
+	{
+		"name": "name",
+		"description": "description",
+		"tags": ["3D","Resources","Assets"],
+		"image": "/assets/works/name.jpg",
+		"video": "/assets/works/name.mp4",
+		"url": "/work/name",
+		"isShow": false
+	},
+	{
+		"name": "name",
+		"description": "description",
+		"tags": ["3D","Resources","Assets"],
+		"image": "/assets/works/name.jpg",
+		"video": "/assets/works/name.mp4",
+		"url": "/work/name",
+		"isShow": false
+	}
+]

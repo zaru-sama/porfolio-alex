@@ -1,0 +1,60 @@
+<div
+  id="scroll-indicator"
+  class="absolute bottom-[15%] text-black dark:text-white transition-all duration-400 ease-out opacity-100"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="currentColor"
+    class="w-8"
+    viewBox="0 0 16 16"
+    data-aos="fade-up-sm"
+    data-aos-delay="600"
+    data-aos-duration="650"
+    data-aos-once="true"
+  >
+    <!-- Path 1: the small top detail -->
+    <path
+      class="animate-bounce translate-y-1 [animation-duration:1.6s]"
+      d="M8 3a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 3"></path>
+
+    <!-- Path 2: the rest (same geometry as original) -->
+    <path
+      d="M12 11a4 4 0 0 1-8 0V5a4 4 0 1 1 8 0zM8 0a5 5 0 0 0-5 5v6a5 5 0 0 0 10 0V5a5 5 0 0 0-5-5"
+    ></path>
+  </svg>
+</div>
+
+<script>
+  (() => {
+    const el = document.getElementById("scroll-indicator");
+    if (!el) return;
+
+    // Tell TS/VSCode what this is (without TS syntax)
+    /** @type {HTMLElement} */
+    const indicator = el;
+
+    const threshold = 400;
+
+    function onScroll() {
+      if (window.scrollY > threshold) {
+        indicator.classList.add(
+          "opacity-0",
+          "-translate-y-20",
+          "pointer-events-none",
+        );
+        indicator.classList.remove("opacity-100", "translate-y-0");
+      }
+      //   else {
+      //     indicator.classList.remove(
+      //       "opacity-0",
+      //       "translate-y-2",
+      //       "pointer-events-none",
+      //     );
+      //     indicator.classList.add("opacity-100", "translate-y-0");
+      //   }
+    }
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  })();
+</script>

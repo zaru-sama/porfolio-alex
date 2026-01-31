@@ -1,0 +1,115 @@
+---
+import Button from "../components/ui/Button.astro";
+import { siteConfig } from "@/config/site";
+import Layout from "@/layouts/Layout.astro";
+import FeaturedWork from "../components/sections/FeaturedWork.astro";
+import AnimatedText from "@/components/ui/AnimatedText.astro";
+import Explore from "@/components/sections/Explore.astro";
+import HeroIconsParallax from "@/components/home/HeroIconsParallax.astro";
+import SxrollDownHero from "@/components/ui/ScrollDownHero.astro";
+---
+
+<Layout
+  title="Alex Portfolio Site 2025"
+  description="Welcome to Alex's portfolio site! Explore my work as a web/UI designer with 5+ years of experience in creating captivating visuals and interactive experiences."
+  keywords="Alex, Portfolio, Web Design, UI Design, Frontend Development, Creative Designer"
+>
+  <div
+    class="relative flex flex-col items-center justify-center site-container h-screen z-20 w-full mx-auto px-4 xl:px-0"
+  >
+    <div
+      class="relative w-full px-4 flex flex-col items-center justify-center mb-16"
+    >
+      <div
+        class="z-10 relative w-full sm:max-w-xl text-center sm:text-left sm:-mt-8"
+      >
+        <!-- Title - AnimatedText animation -->
+        <h1 class="mb-4 text-center">
+          <AnimatedText
+            content="Hi, I'm Alex -"
+            delay={0.1}
+            duration={0.5}
+            stagger={0.08}
+            class="text-5xl leading-tight md:text-4xl lg:text-6xl font-brand"
+          />
+        </h1>
+
+        <!-- First description - AnimatedText animation -->
+        <div class="mb-2 text-center">
+          <AnimatedText
+            content="an experienced front-end web developer with a strong UI/UX and graphic design focus, building responsive websites and web apps with clean, modern code. I love blending design and code to create engaging, user-friendly experiences that solve real-world needs."
+            delay={0.3}
+            duration={0.5}
+            stagger={0.015}
+            class="text-base text-neutral-600 dark:text-neutral-400"
+          />
+        </div>
+
+        <!-- Button - AOS animation -->
+        <div
+          class="flex flex-col items-center justify-center"
+          data-aos="fade-up-sm"
+          data-aos-delay="900"
+          data-aos-duration="500"
+          data-aos-once="true"
+        >
+          <Button
+            url={siteConfig.resume}
+            target="_blank"
+            type="fill"
+            className="m-auto mt-4 text-center sm:text-left sm:m-0 sm:mt-6 max-w-[200px] group"
+          >
+            Resume <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              class="size-4"
+            >
+              <path
+                class="group-hover:-translate-y-1 transition"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"></path>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5"
+              ></path>
+            </svg>
+          </Button>
+        </div>
+      </div>
+      <HeroIconsParallax />
+    </div>
+    <SxrollDownHero />
+  </div>
+
+  <section
+    class="mb-12"
+    data-aos="fade-up-sm"
+    data-aos-delay="100"
+    data-aos-duration="600"
+    data-aos-once="true"
+  >
+    <Explore
+      title="Focus & Interests"
+      description="My passions and interests that guide my work and keep me curious."
+    />
+  </section>
+
+  <section
+    class="mt-26 mb-12"
+    data-aos="fade-up-sm"
+    data-aos-delay="100"
+    data-aos-duration="600"
+    data-aos-once="true"
+  >
+    <FeaturedWork
+      title="Featured Projects"
+      description="A mix of web development, UI/UX, and visual design work, focused on fast, accessible, user-friendly experiences."
+      limit={5}
+    />
+  </section>
+</Layout>
