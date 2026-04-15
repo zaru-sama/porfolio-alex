@@ -25,21 +25,19 @@
 		"isShow": true
 	},
 	{
-		"name": "name",
-		"description": "description",
-		"tags": ["3D","Resources","Assets"],
-		"image": "/assets/works/name.jpg",
-		"video": "/assets/works/name.mp4",
-		"url": "/work/name",
-		"isShow": false
+		"name": "AP Marketing",
+		"description": "Marketing website",
+		"tags": ["Marketing", "Taiwind", "Template Toolkit", "Perl"],
+		"image": "/assets/works/ap-marketing.webp",
+		"url": "https://www.nz-giveaway-76.com/cgi-bin/global.pl?todo=winner",
+		"isShow": true
 	},
 	{
-		"name": "name",
-		"description": "description",
-		"tags": ["3D","Resources","Assets"],
-		"image": "/assets/works/name.jpg",
-		"video": "/assets/works/name.mp4",
-		"url": "/work/name",
-		"isShow": false
+		"name": "eGentic",
+		"description": "Lead generation company",
+		"tags": ["Leads","Word Press","SEO"],
+		"image": "/assets/works/egentic.webp",
+		"url": "https://www.egentic.com/en/",
+		"isShow": true
 	}
 ]
