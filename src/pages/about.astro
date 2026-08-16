@@ -1,18 +1,18 @@
 ---
-import { Code, Globe, Monitor, Palette, Smartphone, Zap } from "@lucide/astro";
-import { siteConfig } from "@/config/site.js";
+import SocialCard from "@/components/cards/SocialCard.astro";
 import Button from "@/components/ui/Button.astro";
 import Matter from "@/components/ui/Matter.astro";
-import Layout from "@/layouts/Layout.astro";
 import Toc from "@/components/widgets/Toc.astro";
-import SocialCard from "@/components/cards/SocialCard.astro";
+import { siteConfig } from "@/config/site.js";
+import Layout from "@/layouts/Layout.astro";
+import { Code, Globe, Monitor, Palette, Smartphone, Zap } from "@lucide/astro";
 
 // Manually define page table of contents structure
 const headings = [
-  { depth: 2, slug: "about-me", text: "About Me" },
-  { depth: 2, slug: "expertise", text: "Expertise" },
-  { depth: 2, slug: "tool-stack", text: "Tool Stack" },
-  { depth: 2, slug: "lets-connect", text: "Let's Connect" },
+	{ depth: 2, slug: "about-me", text: "About Me" },
+	{ depth: 2, slug: "expertise", text: "Expertise" },
+	{ depth: 2, slug: "tool-stack", text: "Tool Stack" },
+	{ depth: 2, slug: "lets-connect", text: "Let's Connect" },
 ];
 
 const filtered = headings.filter((h) => h.depth <= 3);

@@ -3,11 +3,11 @@ import social from "@/collections/social.json";
 const { displaySocialIds } = Astro.props;
 
 const filteredSocial = social.filter((item) => {
-  if (item.isShow === false) return false;
-  if (displaySocialIds.length > 0) {
-    return displaySocialIds.includes(item.id);
-  }
-  return true;
+	if (item.isShow === false) return false;
+	if (displaySocialIds.length > 0) {
+		return displaySocialIds.includes(item.id);
+	}
+	return true;
 });
 ---
 

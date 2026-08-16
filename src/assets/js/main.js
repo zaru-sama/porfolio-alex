@@ -1,4 +1,4 @@
-import AOS from 'aos';
+import AOS from "aos";
 
 window.darkMode = false;
 
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	// AOS
 	AOS.init({
 		duration: 400,
-		easing: 'ease-out-cubic',
+		easing: "ease-out-cubic",
 		once: true,
 		offset: 20,
 		delay: 0,
@@ -74,13 +74,11 @@ window.evaluateHeaderPosition = () => {
 		);
 		headerElement.classList.add(...stickyClasses);
 		headerElement.classList.remove(...unstickyClasses);
-
 	} else {
 		headerElement.firstElementChild.classList.remove(...stickyClassesContainer);
 		headerElement.firstElementChild.classList.add(...unstickyClassesContainer);
 		headerElement.classList.add(...unstickyClasses);
 		headerElement.classList.remove(...stickyClasses);
-
 	}
 };
 

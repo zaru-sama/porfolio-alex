@@ -1,32 +1,33 @@
 ---
 interface Props {
-  name: string;
-  image: string;
-  url: string;
-  description?: string;
-  tags?: string[];     
-  video?: string;       
-  isShow?: boolean;     
-  layout?: 'featured' | 'grid'; 
-  index?: number;
-  target?: string;      
+	name: string;
+	image: string;
+	url: string;
+	description?: string;
+	tags?: string[];
+	video?: string;
+	isShow?: boolean;
+	layout?: "featured" | "grid";
+	index?: number;
+	target?: string;
 }
 
 const {
-  name,
-  description = '',
-  url,
-  image,
-  tags = [],
-  video,
-  isShow = true,
-  layout = 'grid',
-  index = 0,
-  target = "_blank"
+	name,
+	description = "",
+	url,
+	image,
+	tags = [],
+	video,
+	isShow = true,
+	layout = "grid",
+	index = 0,
+	target = "_blank",
 } = Astro.props;
 
-
-const videoId = `workcard-video-${index}-${name.replace(/[^a-z0-9]+/gi, '-').toLowerCase()}`;
+const videoId = `workcard-video-${index}-${name
+	.replace(/[^a-z0-9]+/gi, "-")
+	.toLowerCase()}`;
 ---
 
 <article
