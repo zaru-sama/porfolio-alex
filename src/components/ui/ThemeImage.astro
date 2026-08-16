@@ -1,19 +1,19 @@
 ---
 interface Props {
-  light: string;
-  dark: string;
-  alt: string;
-  class?: string;
-  loading?: "lazy" | "eager";
-  decoding?: "async" | "auto" | "sync";
+	light: string;
+	dark: string;
+	alt: string;
+	class?: string;
+	loading?: "lazy" | "eager";
+	decoding?: "async" | "auto" | "sync";
 }
 const {
-  light,
-  dark,
-  alt,
-  class: className = "",
-  loading = "lazy",
-  decoding = "async",
+	light,
+	dark,
+	alt,
+	class: className = "",
+	loading = "lazy",
+	decoding = "async",
 } = Astro.props;
 ---
 

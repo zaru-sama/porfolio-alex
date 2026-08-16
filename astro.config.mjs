@@ -1,31 +1,32 @@
-import tailwindcss from "@tailwindcss/vite";
-import { defineConfig } from "astro/config";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
-import { fileURLToPath } from "url";
-import path from "path";
+import tailwindcss from "@tailwindcss/vite";
+import { defineConfig } from "astro/config";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-const siteUrl = import.meta.env.PUBLIC_SITE_URL || 'https://porfolio-alex.vercel.app';
+const siteUrl =
+	import.meta.env.PUBLIC_SITE_URL || "https://porfolio-alex.vercel.app";
 
 // https://astro.build/config
 export default defineConfig({
-  site: siteUrl,
-  base: '/',
-  envPrefix: 'PUBLIC_',
-  vite: {
-    plugins: [tailwindcss()],
-    resolve: {
-      alias: {
-        '@': path.resolve(__dirname, './src')
-      }
-    }
-  },
+	site: siteUrl,
+	base: "/",
+	envPrefix: "PUBLIC_",
+	vite: {
+		plugins: [tailwindcss()],
+		resolve: {
+			alias: {
+				"@": path.resolve(__dirname, "./src"),
+			},
+		},
+	},
 
-  server: {
-    port: 5200,
-  },
+	server: {
+		port: 5200,
+	},
 
-  integrations: [mdx(), sitemap()],
+	integrations: [mdx(), sitemap()],
 });
